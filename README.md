@@ -69,36 +69,3 @@ Controllers → Services → Repositories → Data
 ## Author 
 Esteban Garcia Higuera 
 
---------------------------------------------------------------------------------------------------
-
-## Folder Structure 
-SmartStockAI.Api/
-│
-├── Controllers/
-│   ├── ProductsController.cs
-│   └── AiController.cs
-│
-├── Models/
-│   ├── Product.cs
-│   ├── ProductCreateRequest.cs
-│   ├── ProductUpdateRequest.cs
-│   ├── ProductResponse.cs
-│   ├── ProductDescriptionRequest.cs
-│   ├── ProductDescriptionResponse.cs
-│   ├── StockSuggestionRequest.cs
-│   └── StockSuggestionResponse.cs
-│
-├── Services/
-│   ├── IProductService.cs
-│   ├── ProductService.cs
-│   ├── IAiService.cs
-│   └── AiService.cs
-│
-├── Repositories/
-│   ├── IProductRepository.cs
-│   └── ProductRepository.cs
-│
-├── Data/
-│   └── AppDbContext.cs
-│
-└── Program.cs
