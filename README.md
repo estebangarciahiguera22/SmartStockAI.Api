@@ -9,15 +9,15 @@ This project is part of my AI Engineering learning path. The goal is to build a 
 
 ## Version Roadmap
 
-v0.1.0 - Initial API structure with simulated AI layer
-v0.2.0 - Database integration with Entity Framework
-v0.3.0 - Validation and error handling
-v0.4.0 - Authentication and authorization
-v0.5.0 - Real AI provider integration
-v0.6.0 - AI-generated marketing captions
-v0.7.0 - RAG or product knowledge base
-v0.8.0 - Docker and deployment
-v1.0.0 - Production-ready release
+- v0.1.0 - Initial API structure with simulated AI layer
+- v0.2.0 - Database integration with Entity Framework
+- v0.3.0 - Validation and error handling
+- v0.4.0 - Authentication and authorization
+- v0.5.0 - Real AI provider integration
+- v0.6.0 - AI-generated marketing captions
+- v0.7.0 - RAG or product knowledge base
+- v0.8.0 - Docker and deployment
+- v0.9.0 - Production-ready release
 --------------------------------------------------------------------------------------------------
 ## Current features:
 
@@ -60,9 +60,8 @@ The current version focuses on:
 --------------------------------------------------------------------------------------------------
 
 ## Architecture
-
 The project follows a layered architecture:
-Controllers → Services → Repositories → Data
+- Controllers → Services → Repositories → Data
 
 --------------------------------------------------------------------------------------------------
 
