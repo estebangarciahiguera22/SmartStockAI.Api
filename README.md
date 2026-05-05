@@ -8,9 +8,7 @@ This project is part of my AI Engineering learning path. The goal is to build a 
 
 ## Current Version
 
-### v1.2 - Validation and Error Handling
-
-This version adds request validation using Data Annotations to ensure that the API receives coherent and valid data before executing business logic.
+### v1.3 - Configuration and Security
 
 ------------------------------------------------
 
@@ -55,6 +53,22 @@ Includes:
 - Minimum stock validation
 - Currency code validation
 - Automatic `400 Bad Request` responses for invalid requests
+
+------------------------------------------------
+
+### v1.3 - Configuration and Security
+
+This version prepares the API for future real AI provider integration by adding a configuration layer.
+
+Includes:
+
+- `AIProviderSettings`
+- Configuration through `appsettings.json`
+- Options Pattern
+- Provider name configuration
+- Model name configuration
+- Preparation for secure API key management
+- Avoiding hardcoded secrets in code
 
 ------------------------------------------------
 
