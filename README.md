@@ -4,22 +4,19 @@ SmartStockAI.Api is an ASP.NET Core Web API designed to manage jewelry inventory
 
 This project is part of my AI Engineering learning path. The goal is to build a backend API with a clean layered architecture and progressively integrate artificial intelligence features.
 
---------------------------------------------------------------------------
+------------------------------------------------
 
 ## Current Version
 
-### v1.3 - Validation and Error Handling
+### v1.3 - Configuration and Security
 
-This version adds request validation using Data Annotations to ensure that the API receives coherent and valid data before executing business logic.
-
-
---------------------------------------------------------------------------
+------------------------------------------------
 
 ## Version History
 
-### v1.0 - CRUD API
+### v1.1 - CRUD API + Simulated AI Layer
 
-Initial version of the jewelry inventory API.
+Initial version of the jewelry inventory API with a basic simulated AI layer.
 
 Includes:
 
@@ -29,25 +26,16 @@ Includes:
 - Dependency Injection
 - In-memory repository
 - Layered architecture
-
---------------------------------------------------------------------------
-
-### v1.1 - Simulated AI Layer
-
-Introduced basic simulated AI services.
-
-Includes:
-
 - `AiController`
 - `AiService`
 - Simulated product description generation
 - Simulated stock suggestion endpoint
 
---------------------------------------------------------------------------
+------------------------------------------------
 
-### v1.2 - Provider Abstraction and PromptBuilder
+### v1.2 - Provider Abstraction, PromptBuilder, Validation and Error Handling
 
-Refactored the AI layer to prepare the project for future real AI provider integration.
+Refactored the AI layer and added request validation to improve the reliability and future scalability of the API.
 
 Includes:
 
@@ -58,16 +46,6 @@ Includes:
 - Marketing caption prompt
 - Product story prompt
 - AI provider abstraction
-
-
---------------------------------------------------------------------------
-
-### v1.3 - Validation and Error Handling
-
-Added request validation to improve API reliability.
-
-Includes:
-
 - Required field validation
 - Minimum length validation
 - Price validation
@@ -76,17 +54,30 @@ Includes:
 - Currency code validation
 - Automatic `400 Bad Request` responses for invalid requests
 
+------------------------------------------------
 
---------------------------------------------------------------------------
+### v1.3 - Configuration and Security
+
+This version prepares the API for future real AI provider integration by adding a configuration layer.
+
+Includes:
+
+- `AIProviderSettings`
+- Configuration through `appsettings.json`
+- Options Pattern
+- Provider name configuration
+- Model name configuration
+- Preparation for secure API key management
+- Avoiding hardcoded secrets in code
+
+------------------------------------------------
 
 ## Version Roadmap
 
-- v1.0 - CRUD API
-- v1.1 - Simulated AI Layer
-- v1.2 - Provider Abstraction and PromptBuilder
-- v1.3 - Validation and Error Handling
-- v1.4 - Configuration and Security
-- v1.5 - Real AI Provider Integration
+- v1.1 - CRUD API + Simulated AI Layer
+- v1.2 - Provider Abstraction, PromptBuilder, Validation and Error Handling
+- v1.3 - Configuration and Security
+- v1.4 - Real AI Provider Integration
 - v2.0 - Database Integration with Entity Framework
 - v2.1 - Authentication and Authorization
 - v2.2 - AI-generated Marketing Captions Improvement
@@ -94,7 +85,7 @@ Includes:
 - v2.4 - Docker and Deployment
 - v3.0 - Production-ready Release
 
---------------------------------------------------------------------------
+------------------------------------------------
 
 ## Current Features
 
@@ -113,8 +104,7 @@ Includes:
 - Request validation with Data Annotations
 - Automatic validation error responses
 
-
---------------------------------------------------------------------------
+------------------------------------------------
 
 ## Technologies Used
 
@@ -124,9 +114,8 @@ Includes:
 - Dependency Injection
 - Data Annotations
 - In-memory repository
-
-
---------------------------------------------------------------------------
+  
+------------------------------------------------
 
 ## Project Purpose
 
@@ -144,8 +133,7 @@ The current version focuses on:
 - Clean separation of responsibilities
 - Future integration with real AI models
 
-
---------------------------------------------------------------------------
+------------------------------------------------
 
 ## Notes
 
@@ -156,9 +144,14 @@ The current version focuses on:
 - The current AI provider is simulated.
 - Future versions will integrate a real AI provider.
 
---------------------------------------------------------------------------
+------------------------------------------------
 
 ## Architecture
+
+The project follows a layered architecture:
+
+```text
+Controllers → Services → Repositories → Data
 
 The project follows a layered architecture:
 
