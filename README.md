@@ -8,7 +8,13 @@ This project is part of my AI Engineering learning path. The goal is to build a 
 
 ## Current Version
 
-### v1.3 - Configuration and Security
+### v1.4 - Real AI Provider Integration
+
+This version integrates the API with a real external AI provider using `HttpClient`, `User Secrets`, and secure configuration practices.
+
+The integration was successfully validated at a technical level: the backend reaches the OpenAI API and handles provider responses correctly.
+
+Real text generation requires a valid API key with active quota or billing enabled.
 
 ------------------------------------------------
 
@@ -72,6 +78,22 @@ Includes:
 
 ------------------------------------------------
 
+### v1.4 - Real AI Provider Integration
+
+Integrated a real external AI provider using a dedicated provider class.
+
+Includes:
+
+- `OpenAIProvider`
+- `HttpClient` integration
+- OpenAI Responses API request structure
+- Secure API key handling with User Secrets
+- Provider error handling
+- Detection of authentication and quota-related errors
+- Real provider communication through `IAIProvider`
+
+------------------------------------------------
+
 ## Version Roadmap
 
 - v1.1 - CRUD API + Simulated AI Layer
@@ -103,6 +125,10 @@ Includes:
 - Product story endpoint
 - Request validation with Data Annotations
 - Automatic validation error responses
+- AI provider configuration with Options Pattern
+- Secure API key handling with User Secrets
+- Real external AI provider integration with `HttpClient`
+- Provider error handling
 
 ------------------------------------------------
 
@@ -123,15 +149,17 @@ The purpose of this project is to create an AI-ready inventory API for jewelry p
 
 The current version focuses on:
 
+
 - Backend architecture
 - Product inventory management
 - Jewelry-specific product data
-- Simulated AI services
 - AI provider abstraction
 - Prompt engineering structure
 - Request validation
+- Secure configuration
+- External AI provider integration
 - Clean separation of responsibilities
-- Future integration with real AI models
+- Future integration with production-ready AI services
 
 ------------------------------------------------
 
@@ -141,11 +169,12 @@ The current version focuses on:
 - Products are stored only while the API is running.
 - If the application stops or restarts, the product list will be reset.
 - Future versions will include database persistence using Entity Framework.
-- The current AI provider is simulated.
-- Future versions will integrate a real AI provider.
+- The API key is not stored in `appsettings.json`.
+- API keys must be configured locally using User Secrets or environment variables.
+- Real AI generation requires an API key with active quota or billing enabled.
+- If the provider account has insufficient quota, the API returns a provider error instead of generated text.
 
 ------------------------------------------------
-
 ## Architecture
 
 The project follows a layered architecture:
@@ -153,8 +182,5 @@ The project follows a layered architecture:
 ```text
 Controllers → Services → Repositories → Data
 
-The project follows a layered architecture:
-
-``text
 Controllers → Services → Repositories → Data
 
