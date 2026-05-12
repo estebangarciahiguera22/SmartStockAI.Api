@@ -179,7 +179,7 @@ The current version focuses on:
 
 The project follows a layered architecture:
 
-``text
+```text
 Controllers → Services → Repositories → Data
 Controllers → Services → Repositories → Data
 
