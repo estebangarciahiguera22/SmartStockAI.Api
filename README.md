@@ -181,6 +181,5 @@ The project follows a layered architecture:
 
 ``text
 Controllers → Services → Repositories → Data
-
 Controllers → Services → Repositories → Data
 
